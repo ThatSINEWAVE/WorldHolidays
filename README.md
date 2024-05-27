@@ -27,7 +27,7 @@ Welcome to WorldHolidays, a web application where you can explore holidays aroun
 <details>
 <summary><strong>Supported Countries (Click to Expand)</strong></summary>
 
-WorldHolidays supports holidays from **97 countries**. Here's the list of supported countries:
+WorldHolidays supports holidays from **114 countries**. Here's the list of supported countries:
 
 1. Andorra
 2. Albania
