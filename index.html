@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WorldHolidays</title>
+    <title>WorldHolidays - Public Holiday Calendar</title>
+    <meta name="description" content="Discover public holidays worldwide with WorldHolidays. Search holidays by country and year.">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="site-data/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="site-data/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="site-data/favicon-32x32.png">
@@ -14,11 +18,14 @@
   </head>
   <body>
     <div class="container">
-      <h1>WorldHolidays</h1>
-      <p>Enter a year and select a country to see its holidays:</p>
+      <div class="header">
+        <h1>WorldHolidays</h1>
+        <p class="subtitle">Discover public holidays around the globe</p>
+      </div>
       <div class="input-group">
         <input type="number" id="yearInput" placeholder="Enter year (e.g., 2024)" min="1000" max="9999" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4)">
         <select id="countrySelect">
+          <option value="">Select a country</option>
           <option value="AD">Andorra</option>
           <option value="AL">Albania</option>
           <option value="AM">Armenia</option>
@@ -134,18 +141,23 @@
           <option value="ZA">South Africa</option>
           <option value="ZW">Zimbabwe</option>
         </select>
-        <button onclick="lookupHolidays()">Lookup</button>
+        <button onclick="lookupHolidays()">
+          <i class="fas fa-search"></i> Find Holidays </button>
+      </div>
+      <div id="loading" class="loading hidden">
+        <i class="fas fa-circle-notch fa-spin"></i>
+        <p>Fetching holidays...</p>
       </div>
       <ul id="holidayList" class="hidden"></ul>
     </div>
     <footer>
-      <a href="https://discord.com/invite/2nHHHBWNDw" target="_blank">
+      <a href="https://discord.com/invite/2nHHHBWNDw" target="_blank" aria-label="Join our Discord">
         <i class="fab fa-discord"></i>
       </a>
-      <a href="https://ko-fi.com/thatsinewave" target="_blank">
+      <a href="https://ko-fi.com/thatsinewave" target="_blank" aria-label="Support us on Ko-fi">
         <i class="fas fa-heart"></i>
       </a>
-      <a href="https://github.com/ThatSINEWAVE/WorldHolidays" target="_blank">
+      <a href="https://github.com/ThatSINEWAVE/WorldHolidays" target="_blank" aria-label="View source on GitHub">
         <i class="fab fa-github"></i>
       </a>
     </footer>
