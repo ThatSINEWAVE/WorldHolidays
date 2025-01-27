@@ -4,6 +4,8 @@
 
 Welcome to WorldHolidays, a web application where you can explore holidays around the world! Simply enter a year and select a country to see its holidays.
 
+![WorldHolidays](https://github.com/user-attachments/assets/49562f46-00d1-439a-9140-9fbaf8752ab2)
+
 </div>
 
 ## How to Use
